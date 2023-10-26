@@ -1,0 +1,231 @@
+body{
+    width: 94%;
+    height: 100vh;
+    background-image: url("images/UNO_1920x1080.avif");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+#computerCardsBlock, #unoCardsBlock, #playerCardsBlock{
+    height: 17rem;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#playerCardsBlock, #computerCardsBlock{
+    padding-left: 3rem;
+    background-color: rgba(255, 217, 0, 0.841);
+}
+#unoCardsBlock{
+    padding-left: 5rem;
+}
+#deck, #openDeck{
+    margin: 0 2rem;
+}
+#unoCardsBlock h2:last-child{
+    background-color: blue;
+    width: 15rem;
+    height: 5rem;
+    padding: 1.6rem 0 0 0;
+    font-size: 3rem;
+    text-align: center;
+    color: darkblue;
+    border-radius: 1rem;
+    background-image: url("images/backgroundgif.gif");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    background-position-x: 1.5rem;
+    left: 44rem;
+    top: -5rem;
+}
+#unoCardsBlock h3{
+    font-size: 2rem;
+    margin: auto 4rem;
+    color: #ffffff;
+}
+.allCards{
+    width: 11rem;
+    height: 17rem;
+    border: 1rem solid white;
+    margin-left: -3rem;
+    box-shadow: 0 0 10px grey;
+    border-radius: 1.3rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-position: center;
+    box-sizing: border-box;
+}
+.allCards:hover{
+    transform: scale(1.03);
+}
+img{
+    width: 12rem;
+    height: 17rem;
+    border-radius: 1rem;
+    border: 1px solid;
+}
+#computerCardsBlock h1, #playerCardsBlock h1{
+    position: absolute;
+    left: 3rem;
+    top: 5.5rem;
+    font-size: 2.8rem;
+    color: white;
+}
+#openDeck{
+    transform: rotateZ(40deg);
+    z-index: -1;
+    margin-left: -3.5rem;
+}
+.allCards p{
+    width: 6rem;
+    height: 4.5rem;
+    border-radius: 50% 50%;  /* 100%  40%*/
+    background-color: whitesmoke;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transform: rotateZ(-45deg);
+}
+.allCards h3:first-child{
+    height: 2rem;
+    text-align: start;
+    margin: 0;
+    color: white;
+}
+.allCards h3:last-child{
+    height: 2rem;
+    text-align: end;
+    margin: 0;
+    color: white;
+}
+.allCards p::before{
+    content: attr(dataValue);
+    font-size: 1.5rem;
+    position: absolute;
+    font-weight: 800;
+    top: 1rem;
+    left: 1rem;
+}
+.allCards p::after{
+    font-size: 1.5rem;
+    position: absolute;
+    font-weight: 800;
+    bottom: 1rem;
+    right: 1rem;
+}
+.redbackground{    background-color: #FF0000;}
+.greenbackground{  background-color: #009900;}
+.yellowbackground{ background-color: #FFFF00;}
+.bluebackground{   background-color: #0000FF;}
+.blackbackground{  background-color: black;}
+.bluevioletbackground {background-color: blueviolet;}
+
+.redFontColor{    color: #FF0000;}
+.greenFontColor{  color: #009900;}
+.yellowFontColor{ color: #FFFF00;}
+.blueFontColor{   color: #0000FF;}
+.blackFontColor{  color: #000;}
+
+.hiddenClass p::content{
+    transform: rotateZ(-40deg);
+    font-size: 3rem;
+}
+h1{
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    width: 15rem;
+}
+button, .playButton{
+    width: 8rem;
+    height: 3rem;
+    margin: 10px 1.2rem 0 0;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    border-radius: 12px;
+    border: 0;
+}
+.optionalDiv{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 20rem;
+    height: 18rem;
+    justify-content: center;
+}
+.optionalDiv button:last-child{
+    z-index: 1;
+}
+#colorButtonsDiv{
+    height: 10rem;
+    width: 10rem;
+    display: flex;
+    margin: 3rem 2.5rem;
+    background-color:black;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.wildButtonsColor{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin: 5px;
+}
+#timer{
+    position: absolute  ;
+    padding-left: 3rem;
+    font-size: 3rem;
+    color: white;
+    margin: 0;
+}
+.unoButton{
+    width: 6rem;
+    height: 6rem;
+    margin: auto 5rem;
+    font-size: 3rem;
+    color: white;
+    background-color:blueviolet;
+    line-height: 1.9;
+    text-align: center;
+    transform: rotate(-45deg);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.unoButton:active{
+    background-color: orange;
+}
+body>h2{
+    align-self: center;
+    width: 30rem;
+    margin: auto 3rem;
+    color:white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5rem;
+    padding-left: 5rem;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 55%;
+    right: 6%;
+}
+.glowDeck{
+    box-shadow: 0 0 40px 25px gold;
+}
